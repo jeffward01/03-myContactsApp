@@ -149,10 +149,14 @@ angular.module('myContacts.contacts', ['ngRoute', 'firebase'])
     
     //Remove Contact
     $scope.removeContact = function(contact){
+        
+        //Log to console, Removing Contact
         console.log("Removing Contact...");
         
+        //Remove Contact
         $scope.contacts.$remove(contact);
         
+        //Set Messate to Contact Removed
         $scope.msg = "Contact Removed";
     }
 
